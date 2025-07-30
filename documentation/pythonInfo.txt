@@ -1,0 +1,114 @@
+==============================
+PYTHON + PACKAGE USAGE CHEAT SHEET
+==============================
+
+------------------------------
+BASICS
+------------------------------
+# Print
+print('Hello, world!')
+
+# Variables
+x = 5
+y = 'hello'
+
+------------------------------
+CONTROL FLOW
+------------------------------
+# If Statement
+if x > 0:
+    print('Positive')
+
+# For Loop
+for i in range(5):
+    print(i)
+
+# While Loop
+while x < 10:
+    x += 1
+
+------------------------------
+FUNCTIONS
+------------------------------
+def greet(name):
+    return f'Hello, {name}'
+
+------------------------------
+DATA STRUCTURES
+------------------------------
+# List
+my_list = [1, 2, 3]
+my_list.append(4)
+
+# Dictionary
+my_dict = {'a': 1, 'b': 2}
+print(my_dict['a'])
+
+==============================
+PACKAGE USAGE EXAMPLES
+==============================
+
+------------------------------
+pandas – DataFrames
+------------------------------
+import pandas as pd
+df = pd.DataFrame({'Name': ['Alice', 'Bob'], 'Age': [25, 30]})
+print(df)
+
+------------------------------
+numpy – Arrays and Math
+------------------------------
+import numpy as np
+arr = np.array([1, 2, 3])
+print(arr * 2)
+
+------------------------------
+tkinter – Simple GUI Window
+------------------------------
+import tkinter as tk
+root = tk.Tk()
+tk.Button(root, text='Click Me').pack()
+root.mainloop()
+
+------------------------------
+sqlite3 – Basic DB Connection
+------------------------------
+import sqlite3
+conn = sqlite3.connect('example.db')
+c = conn.cursor()
+c.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER, name TEXT)')
+conn.commit()
+
+------------------------------
+csv – Read CSV File
+------------------------------
+import csv
+with open('data.csv', newline='') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)
+
+------------------------------
+os – List Files in Directory
+------------------------------
+import os
+print(os.listdir('.'))
+
+------------------------------
+fpdf – Create a Simple PDF
+------------------------------
+from fpdf import FPDF
+pdf = FPDF()
+pdf.add_page()
+pdf.set_font('Arial', size=12)
+pdf.cell(200, 10, txt='Hello World', ln=True)
+pdf.output('simple.pdf')
+
+------------------------------
+reportlab – PDF with Paragraph
+------------------------------
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+c = canvas.Canvas('example.pdf', pagesize=letter)
+c.drawString(100, 750, 'Hello from ReportLab')
+c.save()

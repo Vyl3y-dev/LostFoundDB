@@ -1,0 +1,15 @@
+Log of Found Lost Items (people who don't own the item, but turn it in --> item lost state)
+Log of Lost Items (people who come looking for the item, but it is not in our posession --> item to be claimed state)
+Log Item Claimed (moves log from item lost state or item to be claimed state to an item found claimed state)
+Generate filtered reports
+Search for item(s)
+
+All of these functions should be linked via a main window anbd should open other windows (but not multiple at once| only one should be present)
+
+Navigation side bar maybe
+Navigation buttons to move throughout the program definitely
+Settings function?
+Users function?
+Non internet login? (keeps it from needing to be screened by the UNi)
+
+Add function to read in data via csv/excel docs

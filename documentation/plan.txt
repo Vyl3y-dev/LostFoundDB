@@ -13,3 +13,4 @@ Users function?
 Non internet login? (keeps it from needing to be screened by the UNi)
 
 Add function to read in data via csv/excel docs
+Add function to add photo to entry

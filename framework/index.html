@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lost & Found</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Lost & Found Tracker</h1>
+    
+    <form method="POST" action="/submit">
+        <input type="text" name="name" placeholder="Item name" required><br>
+        <input type="text" name="desc" placeholder="Description"><br>
+        <input type="text" name="location" placeholder="Found at..."><br>
+        <button type="submit">Log Item</button>
+    </form>
+
+    <h2>All Logged Items:</h2>
+    <ul>
+        {% for item in items %}
+            <li><strong>{{ item[1] }}</strong> - {{ item[2] }} ({{ item[3] }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

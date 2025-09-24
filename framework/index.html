@@ -11,13 +11,36 @@
         <input type="text" name="name" placeholder="Item name" required><br>
         <input type="text" name="desc" placeholder="Description"><br>
         <input type="text" name="location" placeholder="Found at..."><br>
+        <input type="text" name="foundBy" placeholder="Found by..."><br>
+        <input type="radio" id="yes" name="claimed" value="Yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="claimed" value="No">
+        <label for="no">No</label><br>
+        <input type="text" name="claimedBy" placeholder="Claimed by..."><br>
+        <input type="text" name="loggedBy" placeholder="Logged by..."><br>
+        <label for="dateAdd">Date Added:</label>
+        <input type="date" id="dateAdd" name="dateAdded">
+        <label for="dateClaim">Date Claimed:</label>
+        <input type="date" id="dateClaim" name="dateClaimed">
         <button type="submit">Log Item</button>
     </form>
 
     <h2>All Logged Items:</h2>
     <ul>
         {% for item in items %}
-            <li><strong>{{ item[1] }}</strong> - {{ item[2] }} ({{ item[3] }})</li>
+            <li><strong>{{ item[1] }}</strong>
+                <ul>
+                    <li>{{ item[2] }}</li>
+                    <li>{{ item[3] }}</li>
+                    <li>{{ item[4] }}</li>
+                    <li>{{ item[5] }}</li>
+                    <li>{{ item[6] }}</li>
+                    <li>{{ item[7] }}</li>
+                    <li>{{ item[8] }}</li>
+                    <li>{{ item[9] }}</li>
+                    <li>{{ item[10] }}</li>
+                </ul>
+            </li>
         {% endfor %}
     </ul>
 </body>

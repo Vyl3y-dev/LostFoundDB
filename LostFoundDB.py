@@ -14,7 +14,13 @@ def submit():
     name = request.form['name']
     desc = request.form['desc']
     location = request.form['location']
-    insert_item(name, desc, location)
+    foundBy = request.form['foundBy']
+    claimed = request.form['claimed']
+    claimedBy = request.form['claimedBy']
+    loggedBy = request.form['loggedBy']
+    dateAdded = request.form['dateAdded']
+    dateClaimed = request.form['dateClaimed']
+    insert_item(name, desc, location, foundBy, claimed, claimedBy, loggedBy, dateAdded, dateClaimed)
     return redirect('/')
 
 if __name__ == '__main__':

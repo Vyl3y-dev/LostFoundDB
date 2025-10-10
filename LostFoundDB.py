@@ -9,6 +9,9 @@ def home():
     items = get_all_items()
     return render_template('index.html', items=items)
 
+@app.route("/add")
+def show_form():
+    return render_template("form.html")
 @app.route('/submit', methods=['POST'])
 def submit():
     name = request.form['name']
